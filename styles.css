@@ -1,0 +1,93 @@
+body {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+#bingo-board {
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    font: 24px 'Nunito', sans-serif;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    padding: 50px;
+    text-align: center;
+    background: #6A2C70;
+    color: white;
+    font: bold 50px 'Nunito', sans-serif;
+}
+
+.bingo-cell {
+    border: 2px solid black;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.bingo-cell:hover {
+    background: #DBE9EE;
+    color: black;
+}
+
+.marked {
+    background-color: #048BA8;
+    color: white;
+}
+
+.marked:hover {
+    background-color: #048BA8;
+}
+
+button {
+    margin: 1em 0 0;
+    font: bold 24px 'Nunito', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 2px groove;
+    color: #6A2C70;
+    padding: 8px 60px;
+}
+
+button.reset {
+    color: red;
+}
+
+button:hover {
+    background: #F9ED69;
+}
+
+div {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.inputs {
+    justify-content: center;
+}
+
+.input {
+    margin: 1em 0 0;
+    font: 24px 'Nunito', sans-serif;
+    text-transform: capitalize;
+    padding: 8px 10px;
+}
+
+.bingoOrLine {
+    text-align: center;
+    display: none;
+    font: bold 50px 'Nunito', sans-serif;
+}
+
+.confirm {
+    text-align: center;
+    display: none;
+    font: 12px 'Nunito', sans-serif;
+    color: red;
+}
