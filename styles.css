@@ -18,7 +18,7 @@ body {
     text-align: center;
     background: #6A2C70;
     color: white;
-    font: bold 50px 'Nunito', sans-serif;
+    font: bold 60px 'Nunito', sans-serif;
 }
 
 .bingo-cell {
@@ -31,7 +31,6 @@ body {
 
 .bingo-cell:hover {
     background: #DBE9EE;
-    color: black;
 }
 
 .marked {
@@ -41,6 +40,7 @@ body {
 
 .marked:hover {
     background-color: #048BA8;
+    color: black;
 }
 
 button {
@@ -48,17 +48,40 @@ button {
     font: bold 24px 'Nunito', sans-serif;
     text-transform: uppercase;
     cursor: pointer;
-    border: 2px groove;
-    color: #6A2C70;
+    border: 2px solid black;
+    color: white;
     padding: 8px 60px;
+    background-color: #6A2C70;
+    border-radius: 5px;
+}
+
+button.submit {
+    background-color: #048BA8;
+}
+
+button.submit:hover {
+    color: #048BA8;
 }
 
 button.reset {
+    background-color: red;
+}
+
+button.reset:hover {
     color: red;
 }
 
+button.no-reset {
+    background-color: green;
+}
+
+button.no-reset:hover {
+    color: green;
+}
+
 button:hover {
-    background: #F9ED69;
+    color: #6A2C70;
+    background-color: #E0E0E0;
 }
 
 .buttons {
@@ -76,21 +99,31 @@ button:hover {
 }
 
 .input {
-    margin: 1em 0 0;
+    margin: 1em 0.1em 0 0;
     font: 24px 'Nunito', sans-serif;
     text-transform: capitalize;
     padding: 8px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 .bingoOrLine {
     text-align: center;
     display: none;
+    margin: 0 auto;
     font: bold 50px 'Nunito', sans-serif;
+}
+
+#bingoOrLine img {
+    display: block;
+    margin: 0 auto;
 }
 
 .confirm {
     text-align: center;
     display: none;
     font: 12px 'Nunito', sans-serif;
-    color: red;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }

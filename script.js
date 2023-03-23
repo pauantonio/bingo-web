@@ -8,8 +8,8 @@ const bingoOrLine = document.getElementById("bingoOrLine");
 const inputs = document.getElementById("inputs");
 const buttons = document.getElementById("buttons");
 const backButton = document.getElementById("back-button");
-const bingoText = document.getElementById("text-bingo");
-const lineText = document.getElementById("text-line");
+const bingoImage = document.getElementById("img-bingo");
+const lineImage = document.getElementById("img-line");
 const confirm = document.getElementById("confirm");
 const yesButton = document.getElementById("yes-button");
 const noButton = document.getElementById("no-button");
@@ -80,14 +80,14 @@ function notRestart() {
 
 function bingo() {
     switchToImage();
-    bingoText.style.display = "block";
-    lineText.style.display = "none";
+    bingoImage.style.display = "block";
+    lineImage.style.display = "none";
 }
 
 function line() {
     switchToImage();
-    lineText.style.display = "block";
-    bingoText.style.display = "none";
+    lineImage.style.display = "block";
+    bingoImage.style.display = "none";
 }
 
 function switchToImage() {
