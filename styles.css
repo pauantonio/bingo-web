@@ -3,9 +3,9 @@ html {
 }
 
 body {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     background: linear-gradient(180deg, #FCF3A8 0%, white 100%);
     min-height: 100vh;
 }
@@ -24,7 +24,7 @@ body {
     font-size: 60px;
     font-style: bold;
     margin-top: 0;
-    padding: 50px 20px;
+    padding: 30px;
     text-align: center;
     background: #6A2C70;
     color: #F9ED69;
