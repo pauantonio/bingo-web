@@ -121,6 +121,7 @@ function loadCellsStatus() {
 }
 
 function createBingoBoard() {
+  bingoBoard.innerHTML = "";
   for (let i = 0; i < rows; i++) {
     const row = document.createElement("tr");
 
