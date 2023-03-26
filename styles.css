@@ -1,7 +1,13 @@
+html {
+    overflow-y: hidden;
+}
+
 body {
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+    background: linear-gradient(180deg, #FCF3A8 0%, white 100%);
+    min-height: 100vh;
 }
 
 #bingo-board {
@@ -24,6 +30,7 @@ body {
     color: #F9ED69;
     text-shadow: -3px 3px 0px black;
     text-decoration: none;
+    border-radius: 20px;
 }
 
 .title img {
@@ -36,6 +43,7 @@ body {
     height: 75px;
     text-align: center;
     vertical-align: middle;
+    background: white;
 }
 
 .bingo-cell:hover {

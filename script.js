@@ -16,6 +16,7 @@ const noButton = document.getElementById("no-button");
 
 const rows = 6;
 const cols = 15;
+numberInput.max = rows * cols;
 
 window.addEventListener("load", startGame);
 restartButton.addEventListener("click", confirmRestart);
