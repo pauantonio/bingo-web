@@ -13,13 +13,21 @@ body {
     margin-right: auto;
 }
 
-.title {
+.title, a {
+    font-family: 'Fredoka One', 'Nunito', sans-serif;
+    font-size: 60px;
+    font-style: bold;
     margin-top: 0;
-    padding: 50px;
+    padding: 50px 20px;
     text-align: center;
     background: #6A2C70;
-    color: white;
-    font: bold 60px 'Nunito', sans-serif;
+    color: #F9ED69;
+    text-shadow: -3px 3px 0px black;
+    text-decoration: none;
+}
+
+.title img {
+    vertical-align: middle;
 }
 
 .bingo-cell {
