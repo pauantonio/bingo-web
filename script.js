@@ -20,12 +20,17 @@ restartButton.addEventListener("click", confirmRestart);
 bingoButton.addEventListener("click", bingo);
 lineButton.addEventListener("click", line);
 backButton.addEventListener("click", swithToTable);
-yesButton.addEventListener("click", startGame);
 noButton.addEventListener("click", notRestart);
+
+yesButton.addEventListener("click", () => {
+  localStorage.removeItem("cellsStatus");
+  startGame();
+});
 
 bingoBoard.querySelectorAll(".bingo-cell").forEach(cell => {
   cell.addEventListener("click", () => {
     cell.classList.toggle("marked");
+    saveCellsStatus();
   });
 });
 
@@ -47,6 +52,7 @@ submitNumberButton.addEventListener("click", () => {
         found = cell.classList.contains("marked");
       }
     });
+    saveCellsStatus();
     if (!found) {
       alert("El nombre " + number + " ja estava marcat i ha estat esborrat.");
     }
@@ -65,7 +71,8 @@ function startGame() {
     cell.innerHTML = number;
     cell.classList.remove("marked");
     number++;
-  }); 
+  });
+  loadCellsStatus();
 }
 
 function confirmRestart() {
@@ -102,4 +109,23 @@ function swithToTable() {
     bingoBoard.style.display = "table";
     inputs.style.display = "flex";
     buttons.style.display = "flex";
+}
+
+function saveCellsStatus() {
+  const cellsStatus = Array.from(bingoBoard.querySelectorAll(".bingo-cell")).map(cell => cell.classList.contains("marked"));
+  localStorage.setItem("cellsStatus", JSON.stringify(cellsStatus));
+}
+
+function loadCellsStatus() {
+  const cellsStatus = JSON.parse(localStorage.getItem("cellsStatus"));
+  if (cellsStatus) {
+    const cells = bingoBoard.querySelectorAll(".bingo-cell");
+    cellsStatus.forEach((marked, index) => {
+      if (marked) {
+        cells[index].classList.add("marked");
+      } else {
+        cells[index].classList.remove("marked");
+      }
+    });
+  }
 }
