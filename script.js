@@ -59,10 +59,13 @@ submitNumberButton.addEventListener("click", () => {
 function startGame() {
   bingoOrLine.style.display = "none";
   confirm.style.display = "none";
-  buttons.style.display = "flex";
 
   createBingoBoard();
   loadCellsStatus();
+
+  inputs.style.display = "flex";
+  numberInput.focus();
+  buttons.style.display = "flex";
 }
 
 function confirmRestart() {
