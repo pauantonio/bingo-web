@@ -1,13 +1,10 @@
-html {
-    overflow-y: hidden;
-}
-
 body {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
     background: linear-gradient(180deg, #FCF3A8 0%, white 100%);
-    min-height: 100vh;
+    min-height: 99vh;
+    margin: 0.5vh;
 }
 
 #bingo-board {
