@@ -14,6 +14,8 @@ const confirm = document.getElementById("confirm");
 const yesButton = document.getElementById("yes-button");
 const noButton = document.getElementById("no-button");
 
+const rows = 6;
+const cols = 15;
 
 window.addEventListener("load", startGame);
 restartButton.addEventListener("click", confirmRestart);
@@ -27,13 +29,6 @@ yesButton.addEventListener("click", () => {
   startGame();
 });
 
-bingoBoard.querySelectorAll(".bingo-cell").forEach(cell => {
-  cell.addEventListener("click", () => {
-    cell.classList.toggle("marked");
-    saveCellsStatus();
-  });
-});
-
 numberInput.addEventListener("keydown", event => {
   if (event.key === "Enter") {
     submitNumberButton.click();
@@ -44,7 +39,7 @@ submitNumberButton.addEventListener("click", () => {
   if (numberInput.value.length == 0) return
 
   let number = parseInt(numberInput.value);
-  if (number >= 1 && number <= 90) {
+  if (number >= 1 && number <= rows*cols) {
     let found = false;
     bingoBoard.querySelectorAll(".bingo-cell").forEach(cell => {
       if (cell.innerHTML == number) {
@@ -66,12 +61,7 @@ function startGame() {
   confirm.style.display = "none";
   buttons.style.display = "flex";
 
-  let number = 1;
-  bingoBoard.querySelectorAll(".bingo-cell").forEach(cell => {
-    cell.innerHTML = number;
-    cell.classList.remove("marked");
-    number++;
-  });
+  createBingoBoard();
   loadCellsStatus();
 }
 
@@ -127,5 +117,24 @@ function loadCellsStatus() {
         cells[index].classList.remove("marked");
       }
     });
+  }
+}
+
+function createBingoBoard() {
+  for (let i = 0; i < rows; i++) {
+    const row = document.createElement("tr");
+
+    for (let j = 0; j < cols; j++) {
+      const cell = document.createElement("td");
+      cell.classList.add("bingo-cell");
+      cell.textContent = i*cols + j + 1;
+      cell.addEventListener("click", () => {
+        cell.classList.toggle("marked");
+        saveCellsStatus();
+      });
+      row.appendChild(cell);
+    }
+
+    bingoBoard.appendChild(row);
   }
 }
