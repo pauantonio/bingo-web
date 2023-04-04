@@ -27,6 +27,7 @@ noButton.addEventListener("click", notRestart);
 
 yesButton.addEventListener("click", () => {
   localStorage.removeItem("cellsStatus");
+  numberInput.value = "";
   startGame();
 });
 
@@ -37,6 +38,7 @@ numberInput.addEventListener("keydown", event => {
 });
 
 submitNumberButton.addEventListener("click", () => {
+  numberInput.focus();
   if (numberInput.value.length == 0) return
 
   let number = parseInt(numberInput.value);
@@ -72,11 +74,13 @@ function startGame() {
 function confirmRestart() {
   confirm.style.display = "flex";
   buttons.style.display = "none";
+  numberInput.focus();
 }
 
 function notRestart() {
   confirm.style.display = "none";
   buttons.style.display = "flex";
+  numberInput.focus();
 }
 
 function bingo() {
@@ -103,6 +107,7 @@ function swithToTable() {
     bingoBoard.style.display = "table";
     inputs.style.display = "flex";
     buttons.style.display = "flex";
+    numberInput.focus();
 }
 
 function saveCellsStatus() {
@@ -136,6 +141,7 @@ function createBingoBoard() {
       cell.addEventListener("click", () => {
         cell.classList.toggle("marked");
         saveCellsStatus();
+        numberInput.focus();
       });
       row.appendChild(cell);
     }
