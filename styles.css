@@ -10,7 +10,7 @@ body {
 #bingo-board {
     border-collapse: collapse;
     margin-bottom: 1em;
-    font: 24px 'Nunito', sans-serif;
+    font: 20px 'Nunito', sans-serif;
     cursor: pointer;
     margin-left: auto;
     margin-right: auto;
@@ -18,16 +18,16 @@ body {
 
 .title, a {
     font-family: 'Fredoka One', 'Nunito', sans-serif;
-    font-size: 60px;
+    font-size: 48px;
     font-style: bold;
     margin-top: 0;
-    padding: 30px;
+    padding: 24px;
     text-align: center;
     background: #6A2C70;
     color: #F9ED69;
-    text-shadow: -3px 3px 0px black;
+    text-shadow: -2px 2px 0px black;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 16px;
 }
 
 .title img {
@@ -36,8 +36,8 @@ body {
 
 .bingo-cell {
     border: 2px solid black;
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     text-align: center;
     vertical-align: middle;
     background: white;
@@ -59,12 +59,12 @@ body {
 
 button {
     margin: 1em 0 0;
-    font: bold 24px 'Nunito', sans-serif;
+    font: bold 20px 'Nunito', sans-serif;
     text-transform: uppercase;
     cursor: pointer;
     border: 2px solid black;
     color: white;
-    padding: 8px 60px;
+    padding: 6px 48px;
     background-color: #6A2C70;
     border-radius: 5px;
 }
@@ -101,22 +101,22 @@ button:hover {
 .buttons {
     display: none;
     justify-content: space-between;
-    max-width: 800px;
+    max-width: 640px;
     margin: 0 auto;
 }
 
 .inputs {
     display: none;
-    max-width: 800px;
+    max-width: 640px;
     margin: 0 auto;
     justify-content: center;
 }
 
 .input {
     margin: 1em 0.1em 0 0;
-    font: 24px 'Nunito', sans-serif;
+    font: 20px 'Nunito', sans-serif;
     text-transform: capitalize;
-    padding: 8px 10px;
+    padding: 6px 8px;
     border: 2px solid black;
     border-radius: 5px;
 }
@@ -125,7 +125,7 @@ button:hover {
     text-align: center;
     display: none;
     margin: 0 auto;
-    font: bold 50px 'Nunito', sans-serif;
+    font: bold 40px 'Nunito', sans-serif;
 }
 
 #bingoOrLine img {
@@ -136,8 +136,8 @@ button:hover {
 .confirm {
     text-align: center;
     display: none;
-    font: 12px 'Nunito', sans-serif;
+    font: 10px 'Nunito', sans-serif;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
