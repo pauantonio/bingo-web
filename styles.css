@@ -18,8 +18,7 @@ body {
 
 .title, a {
     font-family: 'Fredoka One', 'Nunito', sans-serif;
-    font-size: 48px;
-    font-style: bold;
+    font-size: 2.5vw;
     margin-top: 0;
     padding: 24px;
     text-align: center;
@@ -32,6 +31,7 @@ body {
 
 .title img {
     vertical-align: middle;
+    width: 4vw;
 }
 
 .bingo-cell {
@@ -140,4 +140,14 @@ button:hover {
     justify-content: center;
     align-items: center;
     gap: 8px;
+}
+
+@media (max-width: 768px) {
+    .title, a {
+        font-size: 8vw;
+    }
+
+    .title img {
+        width: 10vw;
+    }
 }
